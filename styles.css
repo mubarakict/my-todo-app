@@ -1,6 +1,7 @@
 .main-header {
     font-size: 70px;
     margin-bottom: 20px;
+    text-align: center;
 }
 * {
     margin: 0;
@@ -9,10 +10,9 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 70vw;
 }
-.empty-state__title ;
+.empty-state__title,
 .empty-state__description {
     margin-bottom: 20px;
 }
@@ -76,7 +76,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 .tick::before {
-    content: "*";
+    content: "✔";
     font-size: 20px;
     display: none;
 }
@@ -97,4 +97,12 @@ input[type="checkbox"] {
     width: 30px;
     height: 30px;
     pointer-events: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+.todo-list:empty + .empty-state {
+    display: flex;
 }
